@@ -23,7 +23,7 @@
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/fire_archive_V1_101674.csv"
+                "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/fire_archive_V1_101674.csv"
             },
             "mark": {
                 "type": "point",
