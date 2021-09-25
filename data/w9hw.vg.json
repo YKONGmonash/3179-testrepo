@@ -11,7 +11,7 @@
     "layer": [
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/austopo.geo.json",
+                "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/austopo.geo.json",
                 "format": {
                     "type": "topojson", "feature": "aus.geo"}
             },
