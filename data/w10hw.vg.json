@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "data": {
+        "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/weatherAUS.csv"
+    },
+    "mark": "bar",
+    "transform": [
+        {
+            "aggregate": [
+                {
+                    "op": "mean",
+                    "field": "MinTemp",
+                    "as": "Mean_Min"
+                },
+                {
+                    "op": "mean",
+                    "field": "MaxTemp",
+                    "as": "Mean_Max"
+                }
+
+            ],
+            "groupby": [
+                "Location"
+            ]
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Location",
+            "type": "nominal",
+            "title": "Location"
+        },
+        "y": {
+            "aggregate": "mean",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "Mean_Min",
+            "type": "quantitative",
+            "scale": {
+                "domain": [
+                    "Mean_Max",
+                    "Mean_Min"
+                ],
+                "range": [
+                    "#e7ba52",
+                    "#c7c7c7"
+                ]
+            },
+            "title": "Max/Min Temp"
+        }
+    }
+}
