@@ -41,7 +41,7 @@
                     "type": "quantitative"
                 },
                 "size": {
-                    "field": "Temp in Kelvin (K)",
+                    "field": "Brightness Temperature",
                     "type": "quantitative",
                     "scale": {
                         "type":"threshold",
@@ -51,7 +51,7 @@
                     }
                 },
                 "color": {
-                    "field": "Temp in Kelvin (K)",
+                    "field": "Brightness Temperature",
                     "type": "quantitative",
                     "scale": {
                         "scheme": "yelloworangered"
