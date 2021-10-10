@@ -2,6 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 300,
     "height": 300,
+    "title":"Mean Temp For Australian Cities",
     "data": {
         "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/weatherAUS.csv"
     },
