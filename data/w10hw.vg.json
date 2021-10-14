@@ -1,13 +1,16 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300,
-    "height": 300,
+    "width": 500,
+    "height": 500,
     "title":"Mean Temp For Australian Cities",
     "data": {
         "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/weatherAUS.csv"
     },
     "mark": "bar",
     "transform": [
+        {"filter":"isValid(datum.MinTemp)"},
+        {"filter":"isValid(datum.MaxTemp)"},
+        {"filter":"isValid(datum.Date)"},
         {
             "aggregate": [
                 {
@@ -23,7 +26,7 @@
 
             ],
             "groupby": [
-                "Location"
+                "Location", "Date"
             ]
         }
     ],
