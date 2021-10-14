@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/melbournedata.csv"
+    },
+    "transform": [
+        {"filter":"datum.WindGustDir!='NA'"},
+        {"filter":"datum.WindGustSpeed>0"}
+    ],
+        "height":600, "width":1000,
+        "title":"WindSpeed",
+        "mark": {"type":"line", "tooltip":{"content": "encoding"}},
+        "encoding": {
+            "x": { "timeUnit":{"unit":"year"}, "field": "Date", "type": "temporal"}, 
+            "y": {"aggregate":"mean","field": "WindGustSpeed", "type": "quantitative"},
+            "color":{"field":"WindGustDir", "type":"nominal"}
+                }
+            }
