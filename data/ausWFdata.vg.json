@@ -1,0 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title": "Australian Wildfire Satellite Data",
+    "projection": {
+        "type": "equirectangular",
+        "center": [146, -36],
+    "rotate": [-100,0,0]
+    },
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/austopo.geo.json",
+                "format": {
+                    "type": "topojson", "feature": "aus.geo"}
+            },
+            "mark": {
+                "type": "geoshape", 
+                "fill": "lightgray",
+                "stroke": "white"
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/fire_archive_V1_101674.csv"
+            },
+            "mark": {
+                "type": "point",
+                "tooltip": {
+                    "content": "data"
+                }
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "longitude",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "latitude",
+                    "type": "quantitative"
+                },
+                "size": {
+                    "field": "Brightness Temperature",
+                    "type": "quantitative",
+                    "scale": {
+                        "type":"threshold",
+                        "domain": [200, 220, 240, 260, 280, 300, 320, 340, 360, 380],
+                        "range":[0.4, 0.8, 1.2 , 1.6 , 2.0, 2.4 ,2.8, 3.2, 3.6, 4.0]
+                        
+                    }
+                },
+                "color": {
+                    "field": "Brightness Temperature",
+                    "type": "quantitative",
+                    "scale": {
+                        "scheme": "yelloworangered"
+                    }
+                }
+            }
+        }
+    ]
+}
