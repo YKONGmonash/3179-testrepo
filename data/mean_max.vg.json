@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title":"Mean Temp For Australian Cities in Celsius(C)",
+    "data": {
+        "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/weatherAUS.csv"
+    },
+    "mark": "bar", 
+    "transform": [
+        {"filter":"isValid(datum.MinTemp)"},
+        {"filter":"isValid(datum.MaxTemp)"},
+        {"filter":"isValid(datum.Date)"},
+        {
+            "aggregate": [
+                
+                {
+                    "op": "mean",
+                    "field": "MaxTemp",
+                    "as": "Mean_Max"
+                }
+            ],
+            "groupby": [
+                "Location", "Date"
+            ]
+        }
+    ],
+    "encoding": {
+        "x": {"field": "Location", "type": "nominal" }, 
+        "y": {
+            "field": "Mean_Max", 
+            "type": "quantitative"
+            },
+            "color": {"field":"Location", "type":"nominal"}
+            } 
+            } 
+        
