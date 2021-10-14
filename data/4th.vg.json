@@ -8,7 +8,7 @@
         {"filter":"datum.WindGustSpeed>0"}
     ],
         "height":600, "width":1000,
-        "title":"WindSpeed",
+        "title":"Wind Gust Data",
         "mark": {"type":"line", "tooltip":{"content": "encoding"}},
         "encoding": {
             "x": { "timeUnit":{"unit":"year"}, "field": "Date", "type": "temporal"}, 

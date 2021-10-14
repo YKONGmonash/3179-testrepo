@@ -5,13 +5,15 @@
     },
     "hconcat": [{
         "height":600, "width":400,
-            "mark": "bar",
+        "title":"Mean Minimum (°C)",
+            "mark": {"type":"bar", "tooltip":{"content":"encoding"}},
             "encoding": {
                 "x": { "field": "Location", "type": "nominal",
-                    "axis": {"labelAngle":"0"}}, 
+                    "axis": {"labelAngle":"0", "labelFontStyle":"bold"}}, 
                 "y": {
-                    "field": "Mean_MinTemp" ,
-                    "type": "quantitative"
+                    "field": "Mean_MinTemp",
+                    "type": "quantitative",
+                    "scale":{"domain":[0,28]}
                     },
                     "color": {
               "field": "Location",
@@ -20,14 +22,14 @@
                 }},
             {
                 "height":600, "width":400,
-                "mark": "bar",
-                "transform": [
-                    {"filter":"isValid(datum.Location)"}],
+                "title":"Mean Maximum (°C)",
+                "mark": {"type":"bar", "tooltip":{"content":"encoding"}},
                 "encoding": {
-                    "x": { "field": "Location", "type": "nominal","axis": {"labelAngle":"0"} }, 
+                    "x": { "field": "Location", "type": "nominal","axis": {"labelAngle":"0", "labelFontStyle":"bold"} }, 
                     "y": {
                         "field": "Mean_MaxTemp" ,
-                        "type": "quantitative"
+                        "type": "quantitative",
+                        "scale":{"domain":[0,28]}
                         },
                         "color": {
                   "field": "Location",

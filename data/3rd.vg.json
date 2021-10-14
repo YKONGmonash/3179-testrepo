@@ -1,17 +1,35 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 500,
-    "title": "Melbourne Data",
-    "data": {"url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/melbournedata.csv"
+    "data": {
+        "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/melbournedata.csv"
     },
-    "mark": {"type":"line"},
-    "encoding": {
-        "x": { "field": "Date", "type": "ordinal",
-            "axis": {"labelAngle":"0", "labelFontStyle":"bold"}}, 
-        "y": {
-            "field": "Humidity9am",
-            "type": "quantitative"
-            }
-            }
-        }
+    "transform": [
+        {"filter":"datum.Humidity9am!='NA'"}
+    ],
+    "vconcat": [{
+        "height":600, "width":1000,
+        "title":"9AM Humidity",
+        "mark": {"type":"line", "tooltip":{"content": "encoding"}},
+        "encoding": {
+            "x": { "timeUnit":{"unit":"yearmonthdate", "step":7}, "field": "Date", "type": "temporal"}, 
+            "y": {
+                "aggregate":"mean",
+                "field": "Humidity9am",
+                "type": "quantitative"
+                }
+                }
+            },
+            {
+                "height":600, "width":1000,
+                "title":"3PM Humidity",
+                "mark": {"type":"line", "tooltip":{"content": "encoding"}},
+                "encoding": {
+                    "x": { "timeUnit":{"unit":"yearmonthdate", "step":7}, "field": "Date", "type": "temporal"}, 
+                    "y": {
+                        "aggregate":"mean",
+                        "field": "Humidity3pm",
+                        "type": "quantitative"
+                        }
+                        }
+                    }        
+        ]}
