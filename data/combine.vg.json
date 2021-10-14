@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/ausweathermeantemp.csv"
+    },
+    "hconcat": [{
+        "height":600, "width":400,
+            "mark": "bar",
+            "encoding": {
+                "x": { "field": "Location", "type": "nominal",
+                    "axis": {"labelAngle":"0"}}, 
+                "y": {
+                    "field": "Mean_MinTemp" ,
+                    "type": "quantitative"
+                    },
+                    "color": {
+              "field": "Location",
+              "type": "nominal"
+              }
+                }},
+            {
+                "height":600, "width":400,
+                "mark": "bar",
+                "transform": [
+                    {"filter":"isValid(datum.Location)"}],
+                "encoding": {
+                    "x": { "field": "Location", "type": "nominal","axis": {"labelAngle":"0"} }, 
+                    "y": {
+                        "field": "Mean_MaxTemp" ,
+                        "type": "quantitative"
+                        },
+                        "color": {
+                  "field": "Location",
+                  "type": "nominal"
+                  }
+                        } 
+                        } 
+            
+        ]
+    }

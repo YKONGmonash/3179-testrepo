@@ -17,11 +17,6 @@
                     "op": "mean",
                     "field": "MinTemp",
                     "as": "Mean_Min"
-                },
-                {
-                    "op": "mean",
-                    "field": "MaxTemp",
-                    "as": "Mean_Max"
                 }
             ],
             "groupby": [
