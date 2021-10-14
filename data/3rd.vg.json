@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1000,
+    "height": 500,
+    "title": "Melbourne Data",
+    "data": {"url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/melbournedata.csv"
+    },
+    "mark": {"type":"line"},
+    "encoding": {
+        "x": { "field": "Date", "type": "ordinal",
+            "axis": {"labelAngle":"0", "labelFontStyle":"bold"}}, 
+        "y": {
+            "field": "Humidity9am",
+            "type": "quantitative"
+            }
+            }
+        }
