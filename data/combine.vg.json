@@ -9,7 +9,7 @@
             "mark": {"type":"bar", "tooltip":{"content":"encoding"}},
             "encoding": {
                 "x": { "field": "Location", "type": "nominal",
-                    "axis": {"labelAngle":"0", "labelFontStyle":"bold"}}, 
+                    "axis": {"labelAngle":"0", "labelFontStyle":"bold", "labelFont": "sans-serif"}}, 
                 "y": {
                     "field": "Mean_MinTemp",
                     "type": "quantitative",
@@ -25,7 +25,7 @@
                 "title":"Mean Maximum (°C)",
                 "mark": {"type":"bar", "tooltip":{"content":"encoding"}},
                 "encoding": {
-                    "x": { "field": "Location", "type": "nominal","axis": {"labelAngle":"0", "labelFontStyle":"bold"} }, 
+                    "x": { "field": "Location", "type": "nominal","axis": {"labelAngle":"0", "labelFontStyle":"bold", "labelFont": "sans-serif"} }, 
                     "y": {
                         "field": "Mean_MaxTemp" ,
                         "type": "quantitative",

@@ -7,7 +7,7 @@
         {"filter":"datum.Humidity9am!='NA'"}
     ],
     "vconcat": [{
-        "height":600, "width":1000,
+        "height":600, "width":800,
         "title":"9AM Humidity",
         "mark": {"type":"line", "tooltip":{"content": "encoding"}},
         "encoding": {
@@ -20,7 +20,7 @@
                 }
             },
             {
-                "height":600, "width":1000,
+                "height":600, "width":800,
                 "title":"3PM Humidity",
                 "mark": {"type":"line", "tooltip":{"content": "encoding"}},
                 "encoding": {

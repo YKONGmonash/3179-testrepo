@@ -13,20 +13,40 @@
 </head>
 
 <body>
-    <h1>Australian Weather Data</h1>
+    <h1><b>Australian Weather Data</b></h1>
     <h2>Australian Wildfire Brightness Temperature Data</h2>
+    <div class="text">
+        <div id='text_div'>
+            <p>From the visualisation below, you can see the distribution of data points collected by NASA satellites which is publically available.
+            <br>The data used here is from the VIIRS (Visible Infrared Imaging Radiometer Suite), an instrument that provides near real-time (NRT) imagery.
+            <br> The higher the brightness temperature, the larger the circle and redder it appears on the map of Australia below.
+            <br> From the map, we can see that the points are clustered around the edges of the Australian coasts, with only a few points around the centre-west area. 
+            </p>
     <div id="aus_heat_map">
     </div>
 
     <h2>Average Temperatures for Australian Cities from 2007-2017 (°C)</h2>
+    <div class="text">
+        <div id='text_div'>
+            <p>The visualisation shown below provides a comparison between the average minimum and maximum temperatures for a few selected Australian Cities. 
+                <br> From here we can see that the city with the lowest average temperature the past decade is Canberra, while the city with the highest average temperature is Brisbane.
+                <br>The data is taken from 2008 to 2017.</p>
         <div id="mean_temp_bar_chart">
         </div>
     
     <h2>Melbourne Humidity Data (%)</h2>
+    <div class="text">
+        <div id='text_div'>
+            <p>Using the same time period, we will next look at the average humidity of Melbourne for the past 10 years.
+                <br>Taking measurements at two points in the day, 9am and 3pm, we can see that the humidity was at its very lowest during 2015.
+            </p>
     <div id="melbourne_humidity_line">
     </div>
 
     <h2>Melbourne WindGust Data</h2>
+    <div class="text">
+        <div id='text_div'>
+            <p>Finally we will look at the Wind Gust data in Melbourne to see how it correlates with the general humidity of the city, as well as its temperature.</p>
     <div id="melbourne_windgust">
     </div>
 </body>

@@ -4,10 +4,10 @@
         "url": "https://raw.githubusercontent.com/YKONGmonash/3179-testrepo/main/data/melbournedata.csv"
     },
     "transform": [
-        {"filter":"datum.WindGustDir!='NA'"},
+        {"filter":"datum.WindGustDir!=='NA'"},
         {"filter":"datum.WindGustSpeed>0"}
     ],
-        "height":600, "width":1000,
+        "height":600, "width":800,
         "title":"Wind Gust Data",
         "mark": {"type":"line", "tooltip":{"content": "encoding"}},
         "encoding": {
